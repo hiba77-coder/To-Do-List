@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily Planner</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <h1>🗓️ Daily Planner</h1>
+  </header>
+
+  <main>
+    <section class="card todo-card">
+      <h2>📋 To-Do List</h2>
+      <div class="todo-inputs">
+        <input id="task-input" type="text" placeholder="Enter task..." />
+        <input id="date-input" type="date" />
+        <input id="time-input" type="number" placeholder="Pomodoro (min)" min="1" />
+        <button id="add-btn">Add</button>
+      </div>
+      <table id="task-table">
+        <thead>
+          <tr>
+            <th>Task</th>
+            <th>Date</th>
+            <th>Timer</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="task-list"></tbody>
+      </table>
+    </section>
+
+    <section class="card pomodoro-card">
+      <h2>⏳ Pomodoro Timer</h2>
+      <div class="time-settings">
+        <div class="setting">
+          <label>Work Time:</label>
+          <input id="work-input" type="number" value="25" min="1"> <span>min</span>
+        </div>
+        <div class="setting">
+          <label>Break Time:</label>
+          <input id="break-input" type="number" value="5" min="1"> <span>min</span>
+        </div>
+        <button id="set-btn">Set</button>
+      </div>
+      <div id="timer">25:00</div>
+      <div id="emoji">⏳</div>
+      <div class="buttons">
+        <button id="start-btn">Start</button>
+        <button id="pause-btn">Pause</button>
+        <button id="reset-btn">Reset</button>
+      </div>
+      <p id="task-name"></p>
+      <audio id="ding-sound" src="https://www.soundjay.com/buttons/sounds/button-16.mp3"></audio>
+    </section>
+  </main>
+
+  <footer>
+    <p>focus time!</p>
+  </footer>
+
+  <script src="todo.js"></script>
+  <script src="pomodoro.js"></script>
+</body>
+</html>
